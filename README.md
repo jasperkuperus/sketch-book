@@ -1,3 +1,7 @@
+# sketch-book
+
+> Simple React app to fiddle around with some stuff
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
