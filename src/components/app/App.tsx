@@ -1,22 +1,13 @@
 import React from 'react';
+import Router from './Router';
 import styled from 'styled-components';
 
 function App() {
-  const { AppContainer, Anchor } = StyleSheet;
+  const { AppContainer } = StyleSheet;
 
   return (
     <AppContainer>
-      <p>
-        <code>Welcome to my sketch book&hellip;</code>
-      </p>
-      <Anchor
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </Anchor>
+      <Router />
     </AppContainer>
   );
 }
@@ -31,9 +22,6 @@ const StyleSheet = {
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
-  `,
-  Anchor: styled.a`
-    color: #61dafb;
   `,
 };
 
