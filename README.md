@@ -10,7 +10,7 @@ Run the following commands to get started:
 
 ```bash
 yarn install
-yarn start
+yarn dev
 ```
 
 Now go to `http://localhost:3000`
@@ -19,7 +19,7 @@ Now go to `http://localhost:3000`
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn dev`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
