@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import * as loaders from './loaders';
 import * as statusIndicators from './statusIndicators';
@@ -7,7 +7,11 @@ import * as statusIndicators from './statusIndicators';
  * Simple page that contains a few CSS/SVG loaders.
  */
 export default function LoaderPage() {
-  const { LoaderContainer, DoneContainer } = StyleSheet;
+  const {
+    LoaderContainer, DoneContainer, ButtonContainer,
+  } = StyleSheet;
+
+  const [renderCount, setRenderCount] = useState(0);
 
   return (
     <div>
@@ -25,10 +29,16 @@ export default function LoaderPage() {
         <loaders.ExpandingSpinner />
       </LoaderContainer>
 
-      <DoneContainer>
+      <DoneContainer key={renderCount}>
         <statusIndicators.DoneIndicator />
         <statusIndicators.ErrorIndicator />
       </DoneContainer>
+
+      <ButtonContainer>
+        <button onClick={() => setRenderCount(renderCount + 1)}>
+          Reset indicators
+        </button>
+      </ButtonContainer>
     </div>
   );
 }
@@ -47,5 +57,8 @@ const StyleSheet = {
     svg {
       margin: 10px;
     }
+  `,
+  ButtonContainer: styled.div`
+    text-align: center;
   `,
 };
